@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: \vue_helloworld\
+    destination: c:\Publish\Vue
+hooks:
+  BeforeInstall:
+    - location: \Scripts\before-install.bat
+      timeout: 900
+  AfterInstall:
+    - location: \Scripts\after-install.bat  
+      timeout: 900

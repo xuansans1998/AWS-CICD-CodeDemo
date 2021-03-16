@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: \build_output\
+    destination: c:\Publish\DotNet
+hooks:
+  BeforeInstall:
+    - location: \Scripts\before-install.bat
+      timeout: 900
+  AfterInstall:
+    - location: \Scripts\after-install.bat  
+      timeout: 900
